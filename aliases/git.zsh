@@ -105,6 +105,7 @@ git push --force-with-lease origin "${b:=$1}"
 }
 compdef _git ggf=git-checkout
 
+unalias ggl
 ggl() {
   if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
     git pull origin "${*}"
